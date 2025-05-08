@@ -72,6 +72,7 @@ button {
     border: none;
     cursor: pointer;
     padding: 0.4rem 0.8rem;
+    
 }
 
 .main {
@@ -408,3 +409,48 @@ footer {
     margin-top: 2rem;
     align-self: flex-start;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#ageModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .modal-content h2 {
+    margin-bottom: 1rem;
+    color: #000;
+  }
+  .modal-content button {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #095c1d;
+    background-color: #095c1d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease
+  }
+  .modal-content button:hover {
+    background-color: #095c1d;
+    transform: scale(1.1); 
+  }
