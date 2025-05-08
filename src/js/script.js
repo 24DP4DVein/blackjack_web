@@ -22,7 +22,7 @@ document.getElementById("button_reg").addEventListener("click", function(event) 
 
 document.getElementById("scrol1").addEventListener("click", function(event) {
     event.preventDefault(); 
-    document.getElementById("how-to-play").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("ka_spelet").scrollIntoView({ behavior: "smooth" });
 });
 
 document.getElementById("scrol2").addEventListener("click", function(event) {
@@ -35,19 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     faqItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Закрываем все
+            
             faqItems.forEach(i => {
                 if (i !== item) i.classList.remove('active');
             });
 
-            // Переключаем текущий
+            
             item.classList.toggle('active');
         });
     });
 });
 
 
-// Кнопка "наверх"
+
 const btnUp = {
     el: document.querySelector('.btn-up'),
     scrolling: false,
@@ -77,7 +77,7 @@ const btnUp = {
     }
 };
 
-// Обработчик клика по кнопке "наверх"
+
 btnUp.el.addEventListener("click", function () {
     window.scrollTo({
         top: 0,
@@ -85,7 +85,7 @@ btnUp.el.addEventListener("click", function () {
     });
 });
 
-// Запускаем прослушивание прокрутки
+
 btnUp.addEventListener();
 
 
@@ -99,3 +99,14 @@ function triggerDownload(fileName) {
   document.body.removeChild(element);
 }
 
+window.onload = function() {
+    document.getElementById('ageModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('ageModal').style.display = 'none';
+}
+
+function redirectToYoutube() {
+    window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=m9lTZXHQs-EQWB99';
+}
